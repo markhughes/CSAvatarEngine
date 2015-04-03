@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Test</title>
+		<style>
+			#holder {
+				margin: 50px;	
+			}
+		</style>
+		
+		<script src="avatarengine.js"></script>
+		<script>
+		function buildMale() {
+			window.maleAvatar = AvatarEngine.get("Mark", AvatarGender.Male);
+			document.getElementById("holder").innerHTML = "";
+				
+			document.getElementById("holder")
+				.appendChild(window.maleAvatar); 
+				
+			window.maleAvatar.update();
+		}
+			
+		function buildFemale() {
+			window.femaleAvatar = AvatarEngine.get("Waffles", AvatarGender.Female);
+
+			document.getElementById("holder2").innerHTML = "";
+				
+			document.getElementById("holder2")
+				.appendChild(window.femaleAvatar); 
+			
+			window.femaleAvatar.update();
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="holder"></div>
+		<div id="holder2"></div>
+	</body>
+</html>
