@@ -48,8 +48,8 @@ var AvatarEngine = {
 	// Path to CSAvatarAssets
 	path: "../../CSAvatarAssets/",
 	
-	// These are tops without any arm graphics, add both the integer and the string
-	topsWithoutArms: [ 2, "2" ],
+	// These are tops without any arm graphics
+	topsWithoutArms: [ 2, 16, 17 ],
 	
 	// Returns an x-avatar element
 	get: function(id, gender) {
@@ -124,7 +124,7 @@ var AvatarEngine = {
 		avatarElement.generateHead = function() {
 			var eHead = document.createElement("x-avatar-head");
 			eHead.style.position = "absolute";
-			eHead.style.zIndex = "14";
+			eHead.style.zIndex = "15";
 			
 			eHead.innerHTML = "<img src=\""+AvatarEngine.path+"assets/head/"+this.avatarDirection+"/"+avatarElement.clothes.head+".png\">";
 
@@ -218,13 +218,13 @@ var AvatarEngine = {
 			var armB = document.createElement("x-avatar-top-armB");
 			
 			mid.style.position = "absolute";
-			mid.style.zIndex = "15";
+			mid.style.zIndex = "16";
 			
 			armA.style.position = "absolute";
-			armA.style.zIndex = "16";
+			armA.style.zIndex = "15";
 			
 			armB.style.position = "absolute";
-			armB.style.zIndex = "16";
+			armB.style.zIndex = "15";
 			
 			mid.innerHTML = "<img src=\""+AvatarEngine.path+"assets/top/"+this.clothes.top+"/top-se-stand.png\">";
 			
